@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart-styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="myProject.html">Home</a></li>
+            <li><a href="favorites.html">Favorites <span id="fav-count" class="fav-count">0</span></a></li>
+            <li><a href="cart.html">Cart <span id="cart-count" class="cart-count">0</span></a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+    <main class="cart-main">
+
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-container">
+            <div id="cart-items" class="cart-items">
+                <!-- Продуктите ще бъдат заредени тук -->
+            </div>
+
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <p>Subtotal: <span id="subtotal-price">0.00</span></p>
+                <p> With promo code: <span id="total-price">0.00</span></p>
+                <p id="delivery-charge" class="delivery-charge">Delivery fee: 0.00</p> <!-- Нов ред за показване на доставката -->
+                <p id="final-price" class="final-price">Final Price: 0.00</p> <!-- Показване на крайната цена с доставката -->
+                <button id="finalize-order-btn" class="finalize-order-btn">Proceed to Checkout</button>
+
+                <!-- Поле за промо код -->
+                <div class="promo-code">
+                    <input type="text" id="promo-input" placeholder="Enter promo code">
+                    <button id="apply-promo-code-btn">Insert</button>
+                </div>
+                <p id="discount-msg" class="discount-msg"></p> <!-- Съобщение за успешна/неуспешна употреба на кода -->
+                <!--Бутон за финализиране -->
+                
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Online Store</p>
+    </footer>
+
+    <script src="scriptCart.js"></script>
+</body>
+
+</html>

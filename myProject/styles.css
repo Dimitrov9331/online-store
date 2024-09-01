@@ -1,0 +1,155 @@
+/* style.css*/
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-size: Arial sans-serif;
+}
+
+header {
+    background-image: url('background.jpg');
+    /* прикачване на изображение */
+    background-position: center;
+    /* позициониране на изображението*/
+    color: white;
+    /* цвят на текста */
+    height: 60vh;
+    /*определяне на височина на снимката*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    /* Важно за позиционирането на nav ul */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+/* Навигационна лента */
+.navbar {
+    background-color: white;
+    /* Фон на лентата */
+    position: fixed;
+    /* Фиксиране на позицията най-отгоре */
+    width: 100%;
+    /* Покрива цялата ширина */
+    top: 0;
+    /* Позициониране най-отгоре */
+    z-index: 1000;
+    /* Над другите елементи */
+    display: flex;
+    justify-content: center;
+    /* Подравняване в центъра */
+}
+
+.navbar ul {
+    list-style-type: none;
+    /* Без маркери за списъка */
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    /* Разстояние между елементите */
+}
+
+.navbar ul li a {
+    color: #333;
+    /* Бял цвят на текста */
+    text-decoration: black;
+    /* Без подчертаване */
+    padding: 15px 20px;
+    /* Вътрешни отстояния */
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product {
+    background-color: #f9f9f9;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.product h3 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.product p {
+    font-size: 1rem;
+    margin: 0 0 15px;
+    color: #777;
+}
+
+.product button {
+    padding: 10px 15px;
+    background-color: #218838;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.product button:hover {
+    background-color: #218838;
+}
+
+/* Добави стилизация за картинката на "Cart" */
+.cart-icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
+    margin-right: 5px;
+    /* Малко разстояние между картинката и броя на артикулите */
+}
+
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+    margin-left: 0px;
+    /* Подравняване на броя с иконата */
+    vertical-align: top;
+}

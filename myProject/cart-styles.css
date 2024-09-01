@@ -1,0 +1,280 @@
+/* Основни стилове за HTML и Body */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    /* Минимална височина на страницата */
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-right: 50px;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar ul li a:hover {
+    background-color: #111;
+}
+
+.cart-main {
+    padding: 20px;
+}
+
+.cart-container {
+    display: flex;
+    gap: 30px;
+}
+
+/* Секция на количката */
+.cart-items {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    min-height: 300px;
+    /* Минимална височина, за да не се свива твърде много */
+}
+
+/* Стилове за продуктите в количката */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+
+.cart-item img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+.cart-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cart-item h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cart-item-price {
+    font-size: bold;
+
+}
+
+.cart-summary {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: right;
+    min-height: 350px;
+    max-height: 350px;
+    display: block;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Разпределя съдържанието равномерно */
+    position: relative;
+    /* За позициониране на бутона */
+}
+
+
+.cart-summary h2 {
+    text-align: center;
+    /* Центрира заглавието на поръчката */
+}
+
+#subtotal-price,
+#total-price {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Разстояние до бутона за финализиране */
+}
+
+.promo-code {
+    margin: 20px 0;
+    /* Разстояние над и под полето за промо код */
+    display: flex;
+    justify-content: center;
+}
+
+#promo-input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex: 1;
+}
+
+#promo-input:disabled {
+    background-color: #f2f2f2;
+    /* Оцветяване на заключеното поле */
+    color: #999;
+    /* Цвят на текста за заключеното поле */
+    border: 1px solid #ccc;
+}
+
+#apply-promo-code-btn {
+    padding: 8px 12px;
+    margin-left: 10px;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#apply-promo-code-btn:hover {
+    background-color: #574bc8;
+}
+
+#quantity-btn button {
+    background-color: #6c63ff;
+}
+
+.discount-msg {
+    color: green;
+    margin-top: 10px;
+    bottom: 40px;
+}
+
+.discount-msg.error {
+    color: red;
+    bottom: 40px;
+}
+
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+    margin-left: 0px;
+    /* Подравняване на броя с иконата */
+    vertical-align: top;
+}
+
+.fav-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+    margin-left: 0px;
+    /* Подравняване на броя с иконата */
+    vertical-align: top;
+}
+
+.cart-item button {
+    color: white;
+    background-color: #f60505;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-item button:hover {
+    background-color: #b10606;
+}
+
+/* Стилизация за крайната цена */
+.final-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Бутон за финализиране на поръчката */
+.finalize-order-btn {
+    padding: 12px 16px;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 80%;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    /* Центрира по ширина */
+    transform: translateX(-50%);
+    /* За прецизно центриране */
+    margin: 0 auto;
+    /* Центриране на бутона */
+    margin-top: 20px;
+}
+
+.finalize-order-btn:hover {
+    background-color: #574bc8;
+}
+
+/* Стилове за футера */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+    /* Закрепва футера на дъното */
+}
+
+.cart-summary p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    /* Разстояние до бутона за финализиране */
+}
+
+/* Стилове за крайната цена */
+.final-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Стилове за доставка */
+.delivery-charge {
+    font-size: 16px;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+
+}

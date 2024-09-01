@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="product-styles.css"> 
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="myProject.html">Home</a></li>
+            <li><a href="favorites.html">Favorites</a></li>
+            <li><a href="cart.html">Cart<span id="cart-count" class="cart-count">0</span></a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="product-container">
+            <div class="product-image-section">
+                <img id="product-image" src="" alt="Product Image">
+            </div>
+
+            <div class="product-details-section">
+                <h1 id="product-name"></h1>
+                <p id="product-description"></p>
+                <p id="product-price"></p>
+                <div class="average-rating">
+                <p id="average-rating">Rating: 0.0 &#9733;  (0 reviews)</p></div>
+                <button id="add-to-cart-btn">Add to Cart</button>
+                <button id="add-to-favorites">Add to Favorites</button>
+
+                <!-- секция за ревюта -->
+                <div class="reviews-section">
+                    <h3>Customer Reviews</h3>
+                    <div id="reviews-list"></div> <!-- Показване на съществуващите ревюта -->
+
+                    <!-- Форма за добавяне на ново ревю -->
+                    <div class="review-form">
+                        <h4>Add a Review</h4>
+                        <input type="text" id="reviewer-name" class="interactive-input" placeholder="Your Name" required>
+                        <textarea id="review-text" rows="4" placeholder="Write your review here..."></textarea>
+
+                        <!-- Секция за рейтинг със звезди -->
+                        <div class="rating-stars">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
+
+                        <button id="submit-review-btn">Submit Review</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 My Online Store</p>
+    </footer>
+    <script src="product.js"></script> 
+</body>
+
+</html>

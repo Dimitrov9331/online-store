@@ -1,0 +1,57 @@
+[
+    {
+        "id": "1",
+        "name": "Luxory Sofa",
+        "description": "Comfortable and stylish sofa with a modern design.",
+        "price": 899.99,
+        "image": "images/Sofa.jpg",
+        "quantity": 1,
+        "reviews": [
+            {
+                "reviewer": "John Doe",
+                "comment": "Very comfortable and stylish!",
+                "rating": 5
+            },
+            {
+                "reviewer": "Jane Smith",
+                "comment": "Nice quality but a bit expensive.",
+                "rating": 4
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Classic Sofa",
+        "description": "Elegant classic sofa with a vintage touch.",
+        "price": 999.99,
+        "image": "images/sofa2.jpg",
+        "reviews": [
+            {
+              "reviewer": "Alice Brown",
+              "comment": "Fits perfectly in my apartment!",
+              "rating": 5
+            }
+          ]
+    },
+    {
+        "id": "3",
+        "name": "Modern Sofa",
+        "description": "A sleek modern sofa perfect for contemporary spaces.",
+        "price": 580.00,
+        "image": "images/sofa3.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Minimalist Comfort Sofa",
+        "description": "Sleek and understated, the Minimalist Comfort Sofa offers a perfect balance of style and comfort.",
+        "price": 1299.99,
+        "image": "images/sofa4.jpg"
+    },
+    {
+        "id": "5",
+        "name": "Modular Design Sofa",
+        "description": " Customize your living space with our Modular Design Sofa.Configuration that perfectly fits your room and lifestyle. The sleek, modern design and versatile options make this sofa a standout piece.",
+        "price": 1999.99,
+        "image": "images/sofa5.jpg"
+    }
+]
