@@ -13,9 +13,9 @@ function updateCartDisplay() {
     cart.forEach((item, index) => {
         total += Number(item.price);
         subtotal = total;
-    
-            calculateDelivery(subtotal)
-        
+
+        calculateDelivery(subtotal)
+
         const itemElement = document.createElement('div');
         itemElement.className = 'cart-item';
         itemElement.innerHTML = `
@@ -24,11 +24,6 @@ function updateCartDisplay() {
                  <h4>${item.name}</h4>
                  <p>$${item.price}</p>
                  <button onclick="removeFromCart(${index})">Remove</button>
-                  <div class="quantity-control">
-                    <button class="quantity-btn" onclick="updateQuantity('${item.id}', -1)">-</button>
-                    <span>${item.quantity}</span>
-                    <button class="quantity-btn" onclick="updateQuantity('${item.id}', 1)">+</button>
-                </div>
              </div>
          `;
         cartItemsContainer.appendChild(itemElement);
@@ -89,6 +84,7 @@ function removeFromCart(index) {
     cart.splice(index, 1); // Премахва продукта по индекс
     localStorage.setItem('cart', JSON.stringify(cart)); // Запазва актуализираната "кошница"
     updateCartDisplay(); // Актуализира показването на "кошницата"
+    updateCartCount();
 }
 
 // Обработва финализиране на поръчката
@@ -97,11 +93,19 @@ document.getElementById("finalize-order-btn").addEventListener('click', () => {
 });
 
 //Обновяване на броя любими продукти
-function favoriteCount(){
+function favoriteCount() {
     const fav = JSON.parse(localStorage.getItem("favorites")) || [];
     document.getElementById("fav-count").textContent = fav.length;
 }
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    document.getElementById("cart-count").textContent = cart.length;
+}
+
 
 // Актуализиране на показването на "кошницата" при зареждане на страницата
+updateCartCount();
 updateCartDisplay();
 favoriteCount();
+
+document.getElementById("finalize-order-btn").addEventListener("click", "href=checkout.html")
