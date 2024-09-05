@@ -10,7 +10,7 @@
 
 <body>
     <!-- нави лента-->
-     <nav class="navbar">
+    <nav class="navbar">
         <ul>
             <li><a href="myProject.html">Home</a></li>
             <li><a href="favorites.html">Favorites<span id="fav-count" class="fav-count">0</span></a></li>
@@ -18,9 +18,9 @@
             <li><a href="contacts.html">Contact</a></li>
             <li><a href="about.html">About Us</a></li>
         </ul>
-     </nav>
+    </nav>
 
-     <main class="checkout-main">
+    <main class="checkout-main">
         <section class="delivery-info">
             <h1>Delivery information</h1>
             <form class="delivery-form">
@@ -55,21 +55,22 @@
             <p class="total-amout">Final Price: <span id="final-price">0.00</span></p>
 
             <h2>Payment Method</h2>
-            <form class="payment-form">
-                <label for="radio" name="payment-method" value="card" checked>Credit/DebitCard</label>
-                <label for="radio" name="payment-method" value="cash">Cash on Delivery</label>
-                <label for="radio" name="payment-method" value="applepay">Apple Pay</label>
-                <label for="radio" name="payment-method" value="gpay">Google Pay</label>
-            </form>
-            <button id="checked-btn">Complete Purchase</button>
+            <h3>Please Select Payment Method</h3>
+            <div class="payment-options">
+                <img src="images/mastercard.JPG" alt="Credit/Debit Card" class="payment-option" data-method="card">
+                <img src="images/cash.JPG" alt="Cash on Delivery" class="payment-option" data-method="cash">
+                <img src="images/apple.JPG" alt="Apple Pay" class="payment-option" data-method="applepay">
+                <img src="images/gpay.JPG" alt="Google Pay" class="payment-option" data-method="gpay">
+            </div>
+            <button class="checkout-btn" disabled>Complete Purchase</button>
         </section>
+    </main>
 
-
-     <footer>
+    <footer>
         <p>&copy; 2024 My Online Store. All rights reserved.</p>
     </footer>
 
-    <script src="checkout.js"></script> 
+    <script src="checkout.js"></script>
 </body>
 
 </html>

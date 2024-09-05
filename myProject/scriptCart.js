@@ -1,9 +1,9 @@
 // Зареждане на продуктите от localStorage и показването им в кошницата
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-console.log(localStorage.getItem('cart'));
 document.getElementById("cart-count").textContent = cart.length;
+
+
 
 function updateCartDisplay() {
     const cartItemsContainer = document.getElementById('cart-items');
@@ -50,6 +50,8 @@ function updateCartDisplay() {
             discountMsg.textContent = 'Promo code applied successfully! 10%.';
             discountMsg.classList.remove('error');
 
+  // Записване на крайната цена в localStorage
+        localStorage.setItem('finalPrice', discTotal.toFixed(2));
         } else {
             discountMsg.textContent = 'Invalid promo code. Please try again.';
             discountMsg.classList.add('error');
@@ -64,6 +66,7 @@ function updateCartDisplay() {
         if (subtotal < 2000) {
             deliveryCharge.textContent = `Delivery Fee: $${delivery.toFixed(2)}`
 
+
         } else {
             deliveryCharge.textContent = "Delivery fee: Free "
         }
@@ -71,12 +74,15 @@ function updateCartDisplay() {
     }
     // Функция за актуализиране на крайната цена
     function updateFinalPrice(total, delivery) {
+        let final;
         if (total < 2000) {
-            const final = total + delivery;
+             final = total + delivery;
             document.getElementById("final-price").textContent = `Final Price: $${final.toFixed(2)}`;
-        }
+        } 
         document.getElementById("final-price").textContent = `Final Price: $${total.toFixed(2)}`;
     }
+     // Записване на крайната цена в localStorage
+     localStorage.setItem('finalPrice', final.toFixed(2));
 }
 
 // Функция за премахване на продукт от "кошницата"
@@ -107,5 +113,6 @@ function updateCartCount() {
 updateCartCount();
 updateCartDisplay();
 favoriteCount();
+// към чекаоут
+document.getElementById("finalize-order-btn").addEventListener("click", "href=checkout.html");
 
-document.getElementById("finalize-order-btn").addEventListener("click", "href=checkout.html")
