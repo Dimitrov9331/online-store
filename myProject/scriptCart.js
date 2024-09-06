@@ -79,10 +79,12 @@ function updateCartDisplay() {
              final = total + delivery;
             document.getElementById("final-price").textContent = `Final Price: $${final.toFixed(2)}`;
         } 
-        document.getElementById("final-price").textContent = `Final Price: $${total.toFixed(2)}`;
-    }
-     // Записване на крайната цена в localStorage
+        final = total;
+        document.getElementById("final-price").textContent = `Final Price: $${final.toFixed(2)}`;
+
+         // Записване на крайната цена в localStorage
      localStorage.setItem('finalPrice', final.toFixed(2));
+    }
 }
 
 // Функция за премахване на продукт от "кошницата"
@@ -113,6 +115,10 @@ function updateCartCount() {
 updateCartCount();
 updateCartDisplay();
 favoriteCount();
-// към чекаоут
-document.getElementById("finalize-order-btn").addEventListener("click", "href=checkout.html");
+
+// Добавяне на събитие към бутона за финализиране на поръчката
+document.getElementById("finalize-order-btn").addEventListener("click", ()=>{
+    // Пренасочване към страницата checkout.html
+    window.location.href = "checkout.html"
+});
 
