@@ -5,76 +5,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout - My Online Store</title>
-    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="checkout.css"> <!-- Връзка към CSS файла за стилове -->
 </head>
 
 <body>
-    <!-- нави лента-->
+    <!-- Навигационна лента с връзки към различни страници -->
     <nav class="navbar">
         <ul>
-            <li><a href="myProject.html">Home</a></li>
-            <li><a href="favorites.html">Favorites<span id="fav-count" class="fav-count">0</span></a></li>
-            <li><a href="cart.html">Cart<span id="cart-count" class="cart-count">0</span></a></li>
-            <li><a href="contacts.html">Contact</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="myProject.html">Home</a></li> <!-- Връзка към началната страница -->
+            <li><a href="favorites.html">Favorites<span id="fav-count" class="fav-count">0</span></a></li> <!-- Любими продукти -->
+            <li><a href="cart.html">Cart<span id="cart-count" class="cart-count">0</span></a></li> <!-- Количка с брояч на продуктите -->
+            <li><a href="contacts.html">Contact</a></li> <!-- Контакти -->
+            <li><a href="about.html">About Us</a></li> <!-- За нас -->
         </ul>
     </nav>
 
     <main class="checkout-main">
+        <!-- Секция за въвеждане на информация за доставка -->
         <section class="delivery-info">
             <h1>Delivery information</h1>
             <form class="delivery-form">
+                <!-- Поле за пълно име -->
                 <label for="full-name">Full Name:</label>
                 <input type="text" id="full-name" name="full-name" required>
-                <p id="full-name-error" class="error-message">Please enter your full name.</p>
+                <p id="full-name-error" class="error-message">Please enter your full name.</p> <!-- Съобщение за грешка -->
 
+                <!-- Поле за телефонен номер -->
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required>
                 <p id="phone-error" class="error-message">Please enter a valid phone number.</p>
 
+                <!-- Поле за имейл адрес -->
                 <label for="email">Email Address:</label>
                 <input type="text" id="email" name="email" placeholder="example@mail.com" required>
-                <p id="email-error" class="error-message">Please enter a valid email addres.</p>
+                <p id="email-error" class="error-message">Please enter a valid email address.</p>
 
+                <!-- Поле за пощенски код -->
                 <label for="postal-code">Postal Code:</label>
                 <input type="text" id="postal-code" name="postal-code" required>
                 <p id="postal-code-error" class="error-message">Please enter your postal code.</p>
 
+                <!-- Поле за регион -->
                 <label for="region">Region:</label>
                 <input type="text" id="region" name="region" required>
                 <p id="region-error" class="error-message">Please enter your region.</p>
 
+                <!-- Поле за град -->
                 <label for="city">City:</label>
                 <input type="text" id="city" name="city" required>
                 <p id="city-error" class="error-message">Please enter your city.</p>
 
+                <!-- Поле за адрес -->
                 <label for="address">Street Address:</label>
                 <input type="text" id="address" name="address" placeholder="Street and number" required>
                 <p id="address-error" class="error-message">Please enter your address.</p>
-
             </form>
         </section>
 
+        <!-- Секция за избор на начин на плащане и преглед на поръчката -->
         <section class="summary-payment">
             <h2>Order Summary</h2>
-            <p class="total-amout">Final Price: <span id="final-price">0.00</span></p>
+            <p class="total-amount">Final Price: <span id="final-price">0.00</span></p> <!-- Показва крайната сума -->
 
             <h2>Payment Method</h2>
             <h3>Please Select Payment Method</h3>
             <div class="payment-options">
+                <!-- Опции за плащане с изображения -->
                 <img src="images/mastercard.JPG" alt="Credit/Debit Card" class="payment-option" data-method="card">
                 <img src="images/cash.JPG" alt="Cash on Delivery" class="payment-option" data-method="cash">
                 <img src="images/apple.JPG" alt="Apple Pay" class="payment-option" data-method="applepay">
                 <img src="images/gpay.JPG" alt="Google Pay" class="payment-option" data-method="gpay">
             </div>
-            <button class="checkout-btn" disabled>Complete Purchase</button>
+            <p id="payment-error" class="payment-error-message">Please select payment method.</p> <!-- Съобщение за грешка, ако не е избран начин на плащане -->
+            <button class="checkout-btn">Complete Purchase</button> <!-- Бутон за завършване на поръчката -->
         </section>
     </main>
 
+    <!-- Футер с информация за авторски права -->
     <footer>
         <p>&copy; 2024 My Online Store. All rights reserved.</p>
     </footer>
 
+    <!-- Включване на JavaScript файла за логика на страницата -->
     <script src="checkout.js"></script>
 </body>
 
