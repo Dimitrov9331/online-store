@@ -1,0 +1,206 @@
+/* Основни стилове за тялото и навигацията */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Навигационна лента */
+.navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+}
+
+/* Стилове за основното съдържание на Checkout */
+.checkout-main {
+    display: flex;
+    flex: 1;
+    /* Основното съдържание заема наличното пространство */
+    flex-direction: row;
+    /* Променяме на ред */
+    gap: 30px;
+    padding: 20px;
+}
+
+/* Информация за доставка */
+.delivery-info {
+    flex: 2;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.delivery-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.delivery-form input,
+.delivery-form select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Секция с крайна сума и метод на плащане */
+.summary-payment {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Крайна сума */
+#final-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Стилове за опции за плащане */
+.payment-options {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.payment-option {
+    width: 60px;
+    height: 30px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.payment-option:hover {
+    transform: scale(1.1);
+}
+
+.payment-option.selected {
+    border-color: #6c63ff;
+    /* Цвят на бутона */
+}
+
+/* Стилизация на бутона за завършване на поръчката */
+.checkout-btn {
+    padding: 12px 16px;
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-top: auto;
+    /* Позициониране най-долу в секцията */
+}
+
+.checkout-btn:hover {
+    background-color: #574bc8;
+}
+
+/* Стилизация на футера */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto;
+    /* Закрепва футера в долната част */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* стилове за грешки */
+.error {
+    border: 2px solid red;
+}
+
+/* съобщение за грещка */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+/* Стилове за грешка при невалиден избор на метод на плащане */
+.payment-option.error {
+    border: 2px solid red;
+}
+
+.payment-error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+    /* Скрито по подразбиране */
+}
+
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+    margin-left: 0px;
+    /* Подравняване на броя с иконата */
+    vertical-align: top;
+}
+
+.fav-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 7px;
+    font-size: 12px;
+    margin-left: 0px;
+    /* Подравняване на броя с иконата */
+    vertical-align: top;
+}
